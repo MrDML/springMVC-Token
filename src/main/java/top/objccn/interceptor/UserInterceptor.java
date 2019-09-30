@@ -26,7 +26,7 @@ public class UserInterceptor implements HandlerInterceptor{
         request.setCharacterEncoding("utf-8");
 
         String auth_token = request.getHeader("auth_token");
-https://gitee.com/MrDaiM/SpringMVC-Token.git
+
         if (auth_token != null){
             // 验证token是否正确
             Boolean aBoolean = jwtUtil.verifyToken(auth_token);
