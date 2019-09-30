@@ -98,7 +98,7 @@ public class JwtUtil {
 
            return  (decodedJWT != null)? true : false;
 
-        } catch (UnsupportedEncodingException e) {
+        } catch (Exception e) {
             return false;
         }
 
