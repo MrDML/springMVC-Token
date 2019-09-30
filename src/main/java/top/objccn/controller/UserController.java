@@ -22,10 +22,7 @@ public class UserController {
     JwtUtil jwtUtil;
 
 
-    /**
-     * headers = {"content-type=application/json"}
-     * 请求格式必须是json
-     */
+
     @RequestMapping(value="/login",method = RequestMethod.POST)
     public ApiResponse login(@RequestBody Map<String,Object>map){
 
@@ -41,14 +38,6 @@ public class UserController {
 
               // 下发token
               String token = jwtUtil.createToekn(name,"1");
-
-              String userName = jwtUtil.getUserName(token);
-              Boolean aBoolean = jwtUtil.verifyToken(token);
-
-              System.out.println("是否验证成功:"+ aBoolean);
-
-
-              System.out.println("userName:"+userName);
 
               System.out.printf("token:"+token);
 
@@ -67,11 +56,6 @@ public class UserController {
     }
 
 
-    /**
-     * 请求格式是正常的表单请求
-     * @param id
-     * @return
-     */
     @RequestMapping("/findById")
     public ApiResponse findById(String id){
 

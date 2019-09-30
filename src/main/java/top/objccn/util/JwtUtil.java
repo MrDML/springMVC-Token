@@ -22,11 +22,7 @@ public class JwtUtil {
 
 
     /**
-     * @Value 要想使用这个注解,  JwtUtil 这个对象必须交给Spring管理, 要么使用是注解管理,要么使用xml<bean></bean>
-     * 过期时间为一天:24 小时
-     * 1000 * 60 一分钟
-     * 1000 * 60  * exepire_time_minute  多长分钟
-     *
+     * 过期时间
      */
     @Value("${jwt.exepire_time_minute}")
     private String exepire_time_minute;

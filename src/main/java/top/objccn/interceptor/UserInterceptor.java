@@ -43,15 +43,7 @@ public class UserInterceptor implements HandlerInterceptor{
 
         responseMessage(response,apiResponse);
 
-      /*  request.setCharacterEncoding("UTF-8");
 
-        response.setContentType("text/json;charset=utf-8");
-     */
-      /*  String authorization = request.getHeader("Authorization");
-
-
-        System.out.println("Authorization:"+authorization);
-       */
 
         System.out.println("进入了拦截器......");
 
